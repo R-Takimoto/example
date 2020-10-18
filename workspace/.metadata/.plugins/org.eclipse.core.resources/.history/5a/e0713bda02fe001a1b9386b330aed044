@@ -1,0 +1,12 @@
+package main;
+
+import model.Folder;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Folder f = new Folder();
+		n.resistration();
+	}
+
+}

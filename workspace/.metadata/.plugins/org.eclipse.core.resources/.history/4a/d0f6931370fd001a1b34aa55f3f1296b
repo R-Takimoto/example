@@ -1,0 +1,8 @@
+package model;
+
+public class TimeLimit {
+	//フィールド
+	private Date now;
+	//メソッド
+	//コンストラクタ
+}

@@ -1,0 +1,46 @@
+package model;
+
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Scanner;
+
+public class Nav {
+	//  メソッド  //////////////////////////////////////////
+	//ナビ
+	public static void nav() {
+		System.out.println("何をしますか？");
+		System.out.println("1: リスト表示 2: 登録 3: 編集 4: 削除");
+	}
+	//表示
+	public void display() {
+
+	}
+	//登録
+	public void resistration() {
+		Scanner sc = new Scanner(System.in);
+
+		while(true) {
+			System.out.println("期限入力");
+			String limit = sc.nextLine();
+			if(limit.matches("[0-9]{8}")) {
+				System.out.println("ok");
+				break;
+			}else {
+				System.out.println("no");
+			}
+		}
+		Calendar c = Calendar.getInstance();
+		c.set(2019, 01, 22, 12, 3, 44);
+		Date d = c.getTime();
+		System.out.println(d);
+	}
+	//編集
+	public void edit() {
+
+	}
+	//削除
+	public void delete() {
+
+	}
+	//  コンストラクタ  ///////////////////////////////////
+}

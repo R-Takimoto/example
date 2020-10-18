@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;db_select.java&apos; to &apos;JDBC/src/DBexample&apos;&#x0D;&#x0A;- 元のプロジェクト: &apos;JDBC&apos;&#x0D;&#x0A;- 宛先要素: &apos;JDBC/src/DBexample&apos;&#x0D;&#x0A;- オリジナル要素: &apos;DBexample.db_select.java&apos;" description="コンパイル単位をコピー" destination="/src&lt;DBexample" element1="/src&lt;DBexample{db_select.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1601618392314" units="1" version="1.0"/>
+</session>

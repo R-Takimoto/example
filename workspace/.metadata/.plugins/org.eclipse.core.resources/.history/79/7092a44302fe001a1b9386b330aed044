@@ -1,0 +1,31 @@
+package model;
+
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Scanner;
+
+public class Nav {
+	//  メソッド  //////////////////////////////////////////
+	//ナビ
+	public static void nav() {
+		System.out.println("何をしますか？");
+		System.out.println("1: リスト表示 2: 登録 3: 編集 4: 削除");
+	}
+	//表示
+	public void display() {
+
+	}
+	//登録
+	public void resistration() {
+
+	}
+	//編集
+	public void edit() {
+
+	}
+	//削除
+	public void delete() {
+
+	}
+	//  コンストラクタ  ///////////////////////////////////
+}

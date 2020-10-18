@@ -1,0 +1,10 @@
+package model;
+
+public class CommonLogic {
+	//Todo選択メソッド
+	public int choiceTodoNum(TodoFolder todoFolder) {
+		int todoNo = 0;
+
+		return todoNo;
+	}
+}

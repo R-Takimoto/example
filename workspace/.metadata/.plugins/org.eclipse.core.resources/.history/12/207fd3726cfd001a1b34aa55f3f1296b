@@ -1,0 +1,64 @@
+package model;
+
+import java.util.Date;
+
+public class Todo {
+	//  フィールド  ///////////////////////////////////////////////
+	private String header;
+	private String body;
+	private int prioritye;
+	private Date resistrationDate;
+	private Date limit;
+	private boolean finished;
+
+	//  メソッド  ////////////////////////////////////////////////
+	//優先度編集
+	public void editPrioritye(int prioritye) {
+		System.out.println("上記データの重要度を変更します");
+
+	}
+	//期限編集
+	public void editLimit() {
+
+	}
+
+	//  ゲッター・セッター  /////////////////////////////////////
+	public String getHeader() {
+		return header;
+	}
+
+	public String getBody() {
+		return body;
+	}
+
+	public int getPrioritye() {
+		return prioritye;
+	}
+	public void setPrioritye(int prioritye) {
+		this.prioritye = prioritye;
+	}
+	public Date getResistrationDate() {
+		return resistrationDate;
+	}
+
+	public Date getLimit() {
+		return limit;
+	}
+	public void setLimit(Date limit) {
+		this.limit = limit;
+	}
+	public boolean isFinished() {
+		return finished;
+	}
+	public void setFinished(boolean finished) {
+		this.finished = finished;
+	}
+
+	//コンストラクタ
+	public Todo(String header, String body, int prioritye, Date limit) {
+		this.header = header;
+		this.body = body;
+		this.prioritye = prioritye;
+		this.limit = limit;
+	}
+}

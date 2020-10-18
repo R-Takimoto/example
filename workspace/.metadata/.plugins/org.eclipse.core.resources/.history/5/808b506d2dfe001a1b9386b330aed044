@@ -1,0 +1,54 @@
+package model;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.Scanner;
+
+public class Folder {
+	//  フィールド  ///////////////////////////////////////
+	ArrayList<Todo> todos;
+
+	//  メソッド  ////////////////////////////////////////
+	//登録
+	public void resistration() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("入力してください");
+		String s = "20200923";
+		SimpleDateFormat std = new SimpleDateFormat("yyyyMMdd");
+
+		std.setLenient(false);
+		try {
+			Date d = std.parse(s);
+			System.out.println(d);
+		}catch(ParseException e) {
+			System.out.println("era");
+		}
+		String yyyy = s.substring(0, 4);
+		System.out.println(yyyy);
+
+	}
+	//削除
+	public void delete() {
+
+	}
+	//表示
+	public void display() {
+
+	}
+	//検索
+	public Todo search() {
+		Todo to = new Todo(null, null, 0, null);
+		return to;
+	}
+	//保存
+	public void saveFolder() {
+
+	}
+
+	//  コンストラクタ  /////////////////////////////////////
+	public Folder() {
+		this.todos = new ArrayList<Todo>();
+	}
+}

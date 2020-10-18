@@ -1,0 +1,54 @@
+package model;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Scanner;
+
+public class Nav {
+	//  メソッド  //////////////////////////////////////////
+	//ナビ
+	public static void nav() {
+		System.out.println("何をしますか？");
+		System.out.println("1: リスト表示 2: 登録 3: 編集 4: 削除");
+	}
+	//表示
+	public void display() {
+
+	}
+	//登録
+	public void resistration() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("入力してください");
+		String s = sc.nextLine();
+//		String s = "20200923";
+		SimpleDateFormat std = new SimpleDateFormat("yyyyMMdd");
+
+		std.setLenient(false);
+		try {
+			Date d = std.parse(s);
+//			System.out.println(d);
+		}catch(ParseException e) {
+			System.out.println("そんな日付はニャー！");
+			System.exit(0);
+		}
+		String yyyy = s.substring(0, 4);
+//		System.out.println(yyyy);
+		String mm = s.substring(4, 6);
+//		System.out.println(mm);
+		String dd = s.substring(6, 8);
+//		System.out.println(dd);
+
+		System.out.println(yyyy + "年" + mm + "月" + dd + "日");
+	}
+	//編集
+	public void edit() {
+
+	}
+	//削除
+	public void delete() {
+
+	}
+	//  コンストラクタ  ///////////////////////////////////
+}

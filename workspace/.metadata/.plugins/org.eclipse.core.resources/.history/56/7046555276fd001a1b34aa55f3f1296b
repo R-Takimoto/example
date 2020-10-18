@@ -1,0 +1,56 @@
+package model;
+
+import java.util.Scanner;
+
+public class Nav {
+	//  フィールド  ////////////////////////////////////////
+	private String name;
+	Folder folder;
+	//  メソッド  //////////////////////////////////////////
+	//ナビ
+	public void nav() {
+		System.out.println("何をしますか？");
+		System.out.println("1: リスト表示 2: 登録 3: 編集 4: 削除");
+	}
+	//表示
+	public void display() {
+
+	}
+	//登録
+	public void resistration() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("見出し入力");
+		System.out.println("内容入力");
+		System.out.println("優先度入力");
+		System.out.println("期限入力");
+	}
+	//編集
+	public void edit() {
+
+	}
+	//削除
+	public void delete() {
+
+	}
+
+	//  ゲッター  /////////////////////////////////////////
+	public String getName() {
+		return name;
+	}
+
+	public Folder getFolder() {
+		return folder;
+	}
+
+
+	//  コンストラクタ  ///////////////////////////////////
+	public Nav() {
+		this.name = "システム";
+	}
+
+	public Nav(String name) {
+		this.name = name;
+		this.folder = new Folder();
+	}
+
+}

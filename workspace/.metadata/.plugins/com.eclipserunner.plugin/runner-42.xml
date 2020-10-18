@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<runner version="1.0.0">
+    <category expanded="true" name="カテゴリーなし">
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Main"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Main (1)"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Main (10)"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Main (11)"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Main (12)"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Main (13)"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Main (14)"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Main (2)"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Main (3)"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Main (4)"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Main (5)"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Main (6)"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Main (7)"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Main (8)"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Main (9)"/>
+    </category>
+</runner>

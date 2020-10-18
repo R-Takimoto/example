@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="ExternalProjectImportWizard">
+		<item key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_NESTED_PROJECTS" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID" value="false"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\S1-06\Desktop\workspace\JDBC"/>
+			<item value="C:\Users\S1-06\Desktop\workspace\Drink"/>
+			<item value="C:\Users\S1-06\Desktop\workspace\RpsOOP"/>
+			<item value="C:\Users\S1-06\Desktop\workspace\PersonalAssistantSample"/>
+			<item value="C:\Users\S1-06\Desktop\workspace\Chap15"/>
+			<item value="C:\Users\S1-06\Desktop\workspace\vending"/>
+			<item value=""/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+			<item value="C:\Users\S1-06\Desktop\rps.zip"/>
+		</list>
+	</section>
+	<section name="ChooseWorkspaceDialogSettings">
+		<item key="DIALOG_X_ORIGIN" value="494"/>
+		<item key="DIALOG_Y_ORIGIN" value="269"/>
+	</section>
+	<section name="WORKBENCH_SETTINGS">
+		<list key="ENABLED_TRANSFERS">
+		</list>
+	</section>
+</section>

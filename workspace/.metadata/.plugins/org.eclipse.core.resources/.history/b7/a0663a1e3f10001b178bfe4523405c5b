@@ -1,0 +1,40 @@
+package model;
+
+import java.util.Scanner;
+
+public class Delete {
+	//削除するTodoの確認
+	public void confirmTodo(TodoFolder todofolder, int todoNo) {
+	}
+	//最終確認
+
+	//Todo削除処理
+	public void deleteTodo(TodoFolder todofolder, int todoNo) {
+		for(int i = 0; i < todofolder.getTodos().size(); i ++) {
+			if(todoNo == todofolder.getTodos().get(i).getNo()) {
+				todofolder.getTodos().remove(i);
+				break;
+			}
+		}
+	}
+	////////////////////////////////////////////////////////////
+	public int todoChoice(TodoFolder todofolder, String item) {
+		int editNum = 0;//タスクの選択用
+		while(true) {
+
+			this.myFolder.sortResistration();//登録順に並べかえ
+			this.myFolder.display();
+			System.out.println(item + "したいタスクNo.を入力してください");
+			try {
+				Scanner sc = new Scanner(System.in);
+				editNum = sc.nextInt();
+				if(editNum > this.myFolder.getTodos().size() || editNum < 1) {
+					System.out.println("そんなNo.なくない？？");
+					continue;
+				}
+				break;
+			}catch(Exception e) {
+				System.out.println("むむ");
+				continue;
+			}
+}

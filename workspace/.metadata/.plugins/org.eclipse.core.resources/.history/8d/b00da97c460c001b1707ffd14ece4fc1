@@ -1,0 +1,25 @@
+package main;
+
+import model.Folder;
+import model.Nav;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Nav think = new Nav();
+
+		think.nav();
+
+//		Folder f = new Folder();
+//		f.readFolder();
+//
+//		f.resistration();
+//
+//		f.display();
+//
+//		f.saveFolder(f.getTodos());
+
+
+	}
+
+}

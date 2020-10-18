@@ -1,0 +1,22 @@
+package model;
+
+public class Edit {
+	//処理状態の変更
+		public void editTodoFinished(TodoFolder todoFolder, int editNo, boolean finished) {
+			int num = editNo - 1;
+			if(finished) {
+				todoFolder.getTodos().get(num).setFinished(finished);
+				System.out.println("こんぐらちゅれーしょん！！！");
+			}else {
+				todoFolder.getTodos().get(num).setFinished(finished);
+				System.out.println("頑張れー");
+			}
+		}
+		//期限の変更
+		public void editLimit() {
+		}
+		//優先度の変更
+		public void editPrioritye() {
+
+		}
+}

@@ -1,0 +1,44 @@
+package model;
+
+import java.util.Date;
+
+public class Edit {
+	//処理状態の確認
+	public boolean confirmFinished() {
+		boolean judge = false;//return
+		System.out.println("タスクは完了しましたか？");
+		String navString = "1:Yes 2:No";
+		int navPattern = 2;
+		int judgeNum = 0;
+		judgeNum = CommonLogic.choiceCommandPattern(navPattern, navString);
+		if(judgeNum == 1) {
+			judge = true;
+		}else if(judgeNum == 2) {
+			judge = false;
+		}else {
+			System.out.println("予期せぬ");
+			System.exit(0);
+		}
+		return judge;
+	}
+	//処理状態の変更
+	public void editTodoFinished(TodoFolder todoFolder, int editNum, boolean finished) {
+		int ListNum = editNum - 1;
+		if(finished) {
+			todoFolder.getTodos().get(ListNum).setFinished(finished);
+			System.out.println("こんぐらちゅれーしょん！！！");
+		}else {
+			todoFolder.getTodos().get(ListNum).setFinished(finished);
+			System.out.println("一つずつこなしていこう！");
+		}
+	}
+	//期限の変更
+	public void editTodoLimit(TodoFolder todoFolder, int editNum, Date limit) {
+		int ListNum = editNum - 1;
+		todoFolder.getTodos().get(ListNum).setLimit(limit);
+	}
+	//優先度の変更
+	public void editPrioritye() {
+
+	}
+}

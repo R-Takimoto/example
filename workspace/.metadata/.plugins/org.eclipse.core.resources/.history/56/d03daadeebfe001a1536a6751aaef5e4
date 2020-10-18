@@ -1,0 +1,138 @@
+package model;
+
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.Scanner;
+
+public class Folder {
+	//  フィールド  ///////////////////////////////////////
+	private ArrayList<Todo> todos;
+
+	//  メソッド  ////////////////////////////////////////
+	//登録
+	public void resistration() {
+		Scanner sc = new Scanner(System.in);
+
+		//見出し処理
+		String header = "";
+		while(true) {
+			try {
+				System.out.println("見出し入力");
+				System.out.println("10文字以内で");
+				header = sc.nextLine();
+				if(header.length() == 0) {
+					System.out.println("なんか書け");
+					continue;
+				}else if(header.length() > 10) {
+					System.out.println("長いわい");
+					continue;
+				}
+				break;
+			}catch(Exception e) {
+				System.out.println("不正ですぅ");
+				continue;
+			}
+		}
+
+		//タスク処理
+		String body = "";
+		while(true) {
+			try {
+				System.out.println("タスク入力");
+				System.out.println("15文字以内で");
+				body = sc.nextLine();
+				if(body.length() == 0) {
+					System.out.println("なんか書け");
+					continue;
+				}else if(body.length() > 15) {
+					System.out.println("長いわい");
+					continue;
+				}
+				break;
+			}catch(Exception e) {
+				System.out.println("不正ですぅ");
+				continue;
+			}
+		}
+
+		//期限処理
+		String limit = "";
+		SimpleDateFormat std = new SimpleDateFormat("yyyyMMdd");
+		Date d;
+		while(true) {
+			try {
+				System.out.println("期限入力");
+				System.out.println("例 19990101");
+				limit = sc.nextLine();
+				std.setLenient(false);
+				d = std.parse(limit);
+				break;
+			}catch(Exception e) {
+				System.out.println("不正ですぅ");
+				continue;
+			}finally {
+//				sc.close();
+			}
+		}
+		String yyyy = limit.substring(0, 4);
+//		System.out.println(yyyy);
+		String mm = limit.substring(4, 6);
+//		System.out.println(mm);
+		String dd = limit.substring(6, 8);
+//		System.out.println(dd);
+
+		System.out.println(yyyy + "年" + mm + "月" + dd + "日");
+
+		//優先度処理
+		int prioritye = 1;
+		while(true) {
+//			Scanner s = new Scanner(System.in);
+			try {
+				Scanner s = new Scanner(System.in);
+				System.out.println("優先度入力ください");
+				System.out.println("低 1～4 高");
+				prioritye = s.nextInt();
+				if(prioritye < 1 || prioritye > 4) {
+					System.out.println("不正ですね");
+					continue;
+				}
+				break;
+			}catch(Exception e) {
+				System.out.println("不正ですぅ");
+				continue;
+			}
+		}
+		this.todos.add(new Todo(header, body, prioritye, d)); //Todoをリストに追加
+
+	}
+	//削除
+	public void delete() {
+
+	}
+	//表示
+	public void display() {
+		SimpleDateFormat s = new SimpleDateFormat("yyyy年MM月dd日");
+		for(int i = 0; i < this.todos.size(); i ++) {
+
+			System.out.println(this.todos.get(i).getHeader());
+			System.out.println(this.todos.get(i).getBody());
+			String ss = s.format(this.todos.get(i).getLimit());
+			System.out.println(ss);
+			System.out.println(this.todos.get(i).getPrioritye());
+		}
+	}
+	//検索
+//	public Todo search() {
+//		return to;
+//	}
+	//保存
+	public void saveFolder() {
+
+	}
+
+	//  コンストラクタ  /////////////////////////////////////
+	public Folder() {
+		this.todos = new ArrayList<Todo>();
+	}
+}

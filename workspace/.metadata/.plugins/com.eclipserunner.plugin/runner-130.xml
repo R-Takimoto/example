@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<runner version="1.0.0">
+    <category expanded="true" name="カテゴリーなし">
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Kudamonoya"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Main"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Main (1)"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Main (10)"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Main (11)"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Main (12)"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Main (13)"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Main (14)"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Main (15)"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Main (16)"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Main (17)"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Main (18)"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Main (19)"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Main (2)"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Main (20)"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Main (21)"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Main (22)"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Main (23)"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Main (24)"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Main (25)"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Main (26)"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Main (27)"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Main (28)"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Main (29)"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Main (3)"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Main (30)"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Main (4)"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Main (5)"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Main (6)"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Main (7)"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Main (8)"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Main (9)"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Main2"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Main3"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Test"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="db_delete"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="db_insert"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="db_select"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="db_select2"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="db_update"/>
+    </category>
+</runner>

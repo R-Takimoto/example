@@ -1,0 +1,91 @@
+package model;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.Scanner;
+
+public class Folder {
+	//  フィールド  ///////////////////////////////////////
+	ArrayList<Todo> todos;
+
+	//  メソッド  ////////////////////////////////////////
+	//登録
+	public void resistration() {
+		Scanner sc = new Scanner(System.in);
+
+		String header = "";
+		while(true) {
+			try {
+				System.out.println("見出し入力");
+				System.out.println("10文字以内で");
+				header = sc.nextLine();
+				if(header.length() == 0) {
+					System.out.println("書け");
+					continue;
+				}
+				break;
+			}catch(Exception e) {
+				System.out.println("不正ですぅ");
+				continue;
+			}
+		}
+
+
+		System.out.println("タスク入力");
+		String body = sc.nextLine();
+
+		System.out.println("期限入力");
+		String limit = sc.nextLine();
+
+		System.out.println("優先度入力");
+		int prioritye = sc.nextInt();
+
+
+		System.out.println("入力してください");
+//		String s = sc.nextLine();
+		String s = "20200923";
+		SimpleDateFormat std = new SimpleDateFormat("yyyyMMdd");
+
+		std.setLenient(false);
+		try {
+			Date d = std.parse(s);
+//			System.out.println(d);
+		}catch(ParseException e) {
+			System.out.println("そんな日付はニャー！");
+			System.exit(0);
+		}
+		String yyyy = s.substring(0, 4);
+//		System.out.println(yyyy);
+		String mm = s.substring(4, 6);
+//		System.out.println(mm);
+		String dd = s.substring(6, 8);
+//		System.out.println(dd);
+
+		System.out.println(yyyy + "年" + mm + "月" + dd + "日");
+
+	}
+	//削除
+	public void delete() {
+
+	}
+	//表示
+	public void display() {
+
+	}
+	//検索
+	public Todo search() {
+		Todo to = new Todo(null, null, 0, null);
+		return to;
+	}
+	//保存
+	public void saveFolder() {
+
+	}
+
+	//  コンストラクタ  /////////////////////////////////////
+	public Folder() {
+		this.todos = new ArrayList<Todo>();
+	}
+}

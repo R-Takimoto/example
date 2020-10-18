@@ -1,0 +1,20 @@
+package main;
+
+import model.Folder;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Folder f = new Folder();
+		f.readFolder();
+
+//		f.resistration();
+//
+//		f.display();
+//
+//		f.saveFolder(f.getTodos());
+
+
+	}
+
+}

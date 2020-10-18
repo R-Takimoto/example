@@ -1,0 +1,9 @@
+package model;
+
+public class Nav {
+	//フィールド
+	private Strinig name;
+	Folder folder;
+	//メソッド
+	//コンストラクタ
+}

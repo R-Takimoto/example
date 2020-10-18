@@ -1,0 +1,12 @@
+package model;
+
+public class Nav {
+	//フィールド
+	private String name;
+	Folder folder;
+	//メソッド
+	//コンストラクタ
+	public Nav() {
+		;
+	}
+}

@@ -1,0 +1,39 @@
+package model;
+
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Date;
+
+public class CommonLogic {
+	//Date型からString変換
+	public static String conversionDateToString(Date date) {
+		String dateFormat = "";
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy年MM月dd日 HH時mm分");
+		dateFormat = sdf.format(date);
+		return dateFormat;
+	}
+	//Todo選択メソッド
+	public int choiceTodoNum(TodoFolder todoFolder) {
+		int todoNo = 0;
+
+		return todoNo;
+	}
+	//優先度順に並び替え
+			public void sortPrioritye(TodoFolder todoFolder) {
+				ArrayList<Todo> todoList = todoFolder.getTodos();
+				Collections.sort(todoList, new Comparator_PriorityeTodo()); //優先度順に並べかえ
+				Collections.reverse(todoList);// 優先度が高い順に並べかえ
+			}
+			//期限順に並べかえ
+			public void sortLimit(TodoFolder todoFolder) {
+				ArrayList<Todo> todoList = todoFolder.getTodos();
+				Collections.sort(todoList, new Comparator_LimitTodo());
+				Collections.reverse(todoList);// 期限が近い順に並べ替え
+			}
+			//登録順に並び替え
+			public void sortResistration(TodoFolder todoFolder) {
+				ArrayList<Todo> todoList = todoFolder.getTodos();
+				Collections.sort(todoList, new Comparator_ResistrationTodo());
+			}
+}

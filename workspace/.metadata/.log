@@ -1,0 +1,229 @@
+!SESSION 2020-10-17 22:54:13.888 -----------------------------------------------
+eclipse.buildId=4.16.0.I20200604-0540
+java.version=11.0.7
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=ja_JP
+Framework arguments:  -product org.eclipse.epp.package.jee.product -keyring /Users/rkhrs/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.jee.product -keyring /Users/rkhrs/.eclipse_keyring
+
+This is a continuation of log file /Users/rkhrs/Downloads/デスクトップ/workspace/.metadata/.bak_0.log
+Created Time: 2020-10-18 00:46:12.187
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-18 00:46:12.187
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-18 00:46:15.546
+!MESSAGE Boot LS startup time from start to initialized: 3357ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-18 00:46:15.618
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.gRNOUpywisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-18 00:46:15.618
+!MESSAGE Creating project sorter...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-18 00:46:15.619
+!MESSAGE Creating project sorter... DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-18 00:46:15.620
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-18 00:46:15.621
+!MESSAGE Scheduling initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-18 00:46:15.621
+!MESSAGE Scheduling initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-18 00:46:15.622
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-18 00:46:15.622
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.gRNOUpyw => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-18 00:46:15.624
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-18 00:46:15.624
+!MESSAGE buffering callback sts4.classpath.gRNOUpyw pesonalAssistant_v2.3 false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-18 00:46:15.625
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-18 00:46:15.626
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-18 00:46:15.627
+!MESSAGE buffering callback sts4.classpath.gRNOUpyw Chap15 false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-18 00:46:15.628
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-18 00:46:15.628
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-18 00:46:15.629
+!MESSAGE buffering callback sts4.classpath.gRNOUpyw Drink false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-18 00:46:15.631
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-18 00:46:15.632
+!MESSAGE classpath=3 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-18 00:46:15.633
+!MESSAGE buffering callback sts4.classpath.gRNOUpyw JDBC false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-18 00:46:15.633
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-18 00:46:15.634
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-18 00:46:15.635
+!MESSAGE buffering callback sts4.classpath.gRNOUpyw PersonalAssistantSample false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-18 00:46:15.636
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-18 00:46:15.637
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-18 00:46:15.638
+!MESSAGE buffering callback sts4.classpath.gRNOUpyw Rps false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-18 00:46:15.638
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-18 00:46:15.640
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-18 00:46:15.641
+!MESSAGE buffering callback sts4.classpath.gRNOUpyw RpsOOP false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-18 00:46:15.642
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-18 00:46:15.643
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-18 00:46:15.643
+!MESSAGE buffering callback sts4.classpath.gRNOUpyw algorithm false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-18 00:46:15.644
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-18 00:46:15.645
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-18 00:46:15.646
+!MESSAGE buffering callback sts4.classpath.gRNOUpyw javaAPI false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-18 00:46:15.646
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-18 00:46:15.647
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-18 00:46:15.648
+!MESSAGE buffering callback sts4.classpath.gRNOUpyw pesonalAssistant false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-18 00:46:15.649
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-18 00:46:15.649
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-18 00:46:15.650
+!MESSAGE buffering callback sts4.classpath.gRNOUpyw pesonalAssistant_v2 false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-18 00:46:15.651
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-18 00:46:15.652
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-18 00:46:15.652
+!MESSAGE buffering callback sts4.classpath.gRNOUpyw pocketMoney false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-18 00:46:15.653
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-18 00:46:15.654
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-18 00:46:15.655
+!MESSAGE buffering callback sts4.classpath.gRNOUpyw rank false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-18 00:46:15.655
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-18 00:46:15.656
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-18 00:46:15.657
+!MESSAGE buffering callback sts4.classpath.gRNOUpyw rpg false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-18 00:46:15.657
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-18 00:46:15.658
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-18 00:46:15.659
+!MESSAGE buffering callback sts4.classpath.gRNOUpyw sample false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-18 00:46:15.659
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-18 00:46:15.660
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-18 00:46:15.661
+!MESSAGE buffering callback sts4.classpath.gRNOUpyw sort false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-18 00:46:15.661
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-18 00:46:15.662
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-18 00:46:15.663
+!MESSAGE buffering callback sts4.classpath.gRNOUpyw sugorokun false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-18 00:46:15.663
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-18 00:46:15.665
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-18 00:46:15.666
+!MESSAGE buffering callback sts4.classpath.gRNOUpyw tyuuka false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-18 00:46:15.666
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-18 00:46:15.667
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-18 00:46:15.667
+!MESSAGE buffering callback sts4.classpath.gRNOUpyw vending false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-18 00:46:15.668
+!MESSAGE executing callback sts4.classpath.gRNOUpyw 19 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-18 00:46:15.781
+!MESSAGE executing callback sts4.classpath.gRNOUpyw SUCCESS [終了しました]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-18 00:46:38.307
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.gRNOUpyw
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-18 00:46:38.308
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.gRNOUpyw
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-18 00:46:38.309
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-10-18 00:46:38.310
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.gRNOUpyw => OK
+
+!ENTRY org.eclipse.ui 2 2 2020-10-18 00:46:50.770
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)

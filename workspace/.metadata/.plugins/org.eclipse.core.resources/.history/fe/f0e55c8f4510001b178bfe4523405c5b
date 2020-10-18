@@ -1,0 +1,20 @@
+package model;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class CommonLogic {
+	//Date型からString変換
+	public static String conversionDateToString(Date date) {
+		String dateFormat = "";
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy年MM月dd日 HH時mm分");
+		dateFormat = sdf.format(date);
+		return dateFormat;
+	}
+	//Todo選択メソッド
+	public int choiceTodoNum(TodoFolder todoFolder) {
+		int todoNo = 0;
+
+		return todoNo;
+	}
+}

@@ -1,0 +1,29 @@
+package model;
+
+public class Nav {
+	//  フィールド  ////////////////////////////////////////
+	private String name;
+	Folder folder;
+	//  メソッド  //////////////////////////////////////////
+
+	//  ゲッター  /////////////////////////////////////////
+	public String getName() {
+		return name;
+	}
+
+	public Folder getFolder() {
+		return folder;
+	}
+
+
+	//  コンストラクタ  ///////////////////////////////////
+	public Nav() {
+		this.name = "システム";
+	}
+
+	public Nav(String name) {
+		this.name = name;
+		this.folder = new Folder();
+	}
+
+}

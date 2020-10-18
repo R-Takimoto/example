@@ -1,0 +1,14 @@
+package model;
+
+import java.util.Date;
+
+public class Todo {
+	//フィールド
+	private String task;
+	private int prioritye;
+	private Date resistrationDate;
+	private Date limit;
+	private boolean finished;
+	//メソッド
+	//コンストラクタ
+}
