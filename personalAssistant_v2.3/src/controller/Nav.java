@@ -39,56 +39,14 @@ public class Nav {
 
 	//main制御ナビ ---------------------------------------------------------------------------
 	public void nav() {
-
-		//ファイル確認処理
-//		boolean flg = myFolder.readFolder();
-//
-//		if(flg == true || myFolder.getTodos().size() == 0) {//ファイル無しもしくはファイル内が空
-//			while(true) {
-//				System.out.println(this.name + "： コマンドを数字で選んでくれる？");
-//				System.out.println("1:登録 2:終了");
-//
-//				//コマンド選択処理
-//				int num = 0; //コマンド選択用
-//				while(true) {
-//					try {
-//						Scanner sc = new Scanner(System.in);
-//						num = sc.nextInt();
-//						if(num < 1 || num > 2) {
-//							System.out.println("1～2で入力して");
-//							System.out.println("1:登録 2:終了");
-//							continue;
-//						}
-//						break;
-//					}catch(Exception e) {
-//						System.out.println("1 or 2！ ok!?");
-//						continue;
-//					}
-//				}
-//
-//				//各種処理
-//				if(num == 1) {
-//					resistration();//登録
-//					if(myFolder.getTodos().size() == 0) {
-//						continue;
-//					}else {
-//						break;
-//					}
-//				}else if(num == 2) {
-//					System.out.println(this.name + "： Bye");
-//					System.exit(0);// 終了
-//				}else {
-//					System.out.println("????");
-//					System.exit(0);
-//				}
-//			}
-//		}else {
-//			System.out.println(this.name + "：今日は何の用？");
-//		}
-//////////////////////////////////////////////////////////////////////////////
-
-		//ファイル存在時処理
+		myFolder.readFolder();//ファイル確認処理
+		System.out.println(this.name + "：Hello");
 		while(true) {
+
+			//フォルダ確認
+			checkFolder_firstNav();//フォルダ空なら実行
+
+			//タスク存在時処理
 			String navString = "1:登録 2:表示 3:編集 4:削除 5:終了";
 			int navPattern = 5;
 			int choiceNum = 0;
@@ -108,13 +66,55 @@ public class Nav {
 				delete();
 				break;
 			case 5:
-//				myFolder.saveFolder(myFolder);/////////////////////////////////////////////////////
+				myFolder.saveFolder(myFolder);/////////////////////////////////////////////////////
 				System.out.println(this.name + "： Bye");
 				System.exit(0);// 終了
 			default:
 				System.out.println("予期せぬ");
 				System.exit(0);// 終了
 			}
+		}
+	}
+	//ファイル確認-----------------------------------------------------------
+	private void checkFolder_firstNav() {
+
+		if(myFolder.getTodos().size() == 0) {
+			while(true) {
+				System.out.println(this.name + "：抱えてるタスクが無いわ。");
+				//コマンド選択処理
+				String navString = "1:登録 2:終了";
+				int navPattern = 2;
+				int choiceNum = 0;
+				choiceNum = CommonLogic.choiceCommandPattern(navPattern, navString);
+
+				//各種処理
+				if(choiceNum == 1) {
+					resistration();//登録
+					if(myFolder.getTodos().size() == 0) {
+						continue;
+					}else {
+						break;
+					}
+				}else if(choiceNum == 2) {
+					System.out.println(this.name + "： Bye");
+					System.exit(0);// 終了
+				}else {
+					System.out.println("????");
+					System.exit(0);
+				}
+			}
+		}else {
+			int todos = 0;
+			int[] finishedTodoNum = CommonLogic.finishedTodoNum(myFolder.getTodos());
+			for(int i = 0; i < myFolder.getTodos().size(); i ++) {
+				for(int j = 0; j < finishedTodoNum.length; j ++) {
+					if(myFolder.getTodos().get(i).getNo() != finishedTodoNum[j]) {
+						todos ++;
+					}
+				}
+			}
+			System.out.println(this.name + "：現在" + todos + "件の未処理タスクが残っているわ");
+			System.out.println(this.name + "：早く片付けてくれる？");
 		}
 	}
 
@@ -146,6 +146,7 @@ public class Nav {
 	public void edit() {
 		Edit edit = new Edit();
 		int todoNum = 0;
+
 		//編集したいタスクを選ぶ
 		String command = "編集";
 		todoNum = CommonLogic.choiceTodo(myFolder, command);
@@ -188,20 +189,39 @@ public class Nav {
 	//削除--------------------------------------------------------------------
 	public void delete() {
 		Delete delete = new Delete();
-		//削除するタスクを選択
-		int editNum = 0;
-		String command = "削除";
-		editNum = CommonLogic.choiceTodo(myFolder, command);
-		//タスク削除の確認
-		boolean judge = delete.confirmTodo(myFolder, editNum);
-		//削除
-		if(judge) {
-			delete.deleteTodo(myFolder, editNum);
-			System.out.println("削除しました");
-			delete.redoFolderNum(myFolder);//No.の振り直し
+		boolean judge = true;//最終判定
+
+		//削除方法の確認
+		boolean confirmJudge = true;
+		confirmJudge = delete.confirmHowToDelete();
+
+		if(confirmJudge == true) {
+			//削除するTodoを選択表示
+			String command = "削除";
+			int editNum = CommonLogic.choiceTodo(myFolder, command);
+			//タスク削除の確認
+			judge = delete.confirmTodo();;
+			//削除
+			if(judge) {
+				delete.deleteTodo(myFolder, editNum);
+				System.out.println("削除しました");
+				delete.redoFolderNum(myFolder);//No.の振り直し
+			}else {
+				System.out.println("削除処理を破棄します");
+			}
 		}else {
-			System.out.println("削除処理を破棄します");
+			//削除するTodosを表示・確認
+			judge = delete.confirmDeleteTodos(myFolder);
+			//削除
+			if(judge == true) {
+				delete.deleteTodos(myFolder);
+				System.out.println("削除しました");
+				delete.redoFolderNum(myFolder);//No.の振り直し
+			}else {
+				System.out.println("削除処理を破棄します");
+			}
 		}
+
 	}
 
 

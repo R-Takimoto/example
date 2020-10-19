@@ -59,6 +59,22 @@ public class CommonLogic {
 		}
 		return choiceNum;
 	}
+	//処理済TodoのNo.取得-----------------------------------------------------------------------------------
+	public static int[] finishedTodoNum(ArrayList<Todo> todos) {
+		ArrayList<Integer> finishedTodo = new ArrayList<Integer>();
+		for(int i = 0; i < todos.size(); i ++) {
+			if(todos.get(i).isFinished() == true) {
+				finishedTodo.add(todos.get(i).getNo());
+			}
+		}
+		//配列に格納
+		int num = finishedTodo.size();
+		int[] finishedNum = new int[num];
+		for(int i = 0; i < num; i ++ ) {
+			finishedNum[i] = finishedTodo.get(i);
+		}
+		return finishedNum;
+	}
 	//Date型からString変換-------------------------------------------------------------------------------
 	public static String conversionDateToString(Date date) {
 		String dateFormat = "";

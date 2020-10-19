@@ -34,11 +34,22 @@ public class Display {
 		}
 	}
 	//Todo一覧表示メソッド------------------------------------------------------------------------------
-	public void displayTodos(TodoFolder todoFolder) {
-		ArrayList<Todo> todoList = todoFolder.getTodos();
-		for(int i = 0; i < todoList.size(); i ++) {
-			Todo todo = todoList.get(i);
-			displayTodo(todo);
+	public void displayTodos(TodoFolder todoFolder, int[]...todoNums) {
+		if(todoNums.length != 0) {
+			ArrayList<Todo> todos = todoFolder.getTodos();
+			for(int i = 0; i < todos.size(); i ++) {
+				for(int j = 0; j < todoNums[0].length; j ++) {
+					if(todos.get(i).getNo()  == todoNums[0][j]) {
+						displayTodo(todos.get(i));
+					}
+				}
+			}
+		}else {
+			ArrayList<Todo> todos = todoFolder.getTodos();
+			for(int i = 0; i < todos.size(); i ++) {
+//				Todo todo = todos.get(i);
+				displayTodo(todos.get(i));
+			}
 		}
 	}
 	//Todo表示メソッド-----------------------------------------------------------------------------------
