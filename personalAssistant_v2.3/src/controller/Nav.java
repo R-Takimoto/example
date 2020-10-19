@@ -26,9 +26,9 @@ public class Nav {
 		return name;
 	}
 
-	public void setName(String name) {
-		this.name = name;
-	}
+//	public void setName(String name) {
+//		this.name = name;
+//	}
 
 	public TodoFolder getMyFolder() {
 		return myFolder;

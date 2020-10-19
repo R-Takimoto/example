@@ -3,7 +3,7 @@ package model;
 import java.util.Date;
 
 public class Edit {
-	//処理状態の確認
+	//処理状態の確認------------------------------------------------------------------------------------------
 	public boolean confirmFinished() {
 		boolean judge = false;//return
 		System.out.println("タスクは完了しましたか？");
@@ -21,7 +21,7 @@ public class Edit {
 		}
 		return judge;
 	}
-	//処理状態の変更
+	//処理状態の変更----------------------------------------------------------------------------------------
 	public void editTodoFinished(TodoFolder todoFolder, int editNum, boolean finished) {
 		int ListNum = editNum - 1;
 		if(finished) {
@@ -32,13 +32,13 @@ public class Edit {
 			System.out.println("一つずつこなしていこう！");
 		}
 	}
-	//変更期限の確認
+	//変更期限の確認--------------------------------------------------------------------------------------
 	public Date confirmLimit() {
 		Resistration resistration = new Resistration();
 		Date limit = resistration.standardInputLimit();
 		return limit;
 	}
-	//期限変更の最終確認
+	//期限変更の最終確認-----------------------------------------------------------------------------------
 	public boolean checkEditLimit(Date limit) {
 		boolean judge = false;
 		String limitF = CommonLogic.conversionDateToString(limit);
@@ -58,18 +58,18 @@ public class Edit {
 		}
 		return judge;
 	}
-	//期限の変更
+	//期限の変更-------------------------------------------------------------------------------------------
 	public void editLimit(TodoFolder todoFolder, int editNum, Date limit) {
 		int ListNum = editNum - 1;
 		todoFolder.getTodos().get(ListNum).setLimit(limit);
 	}
-	//変更優先度の確認
+	//変更優先度の確認-------------------------------------------------------------------------------------
 	public int confirmPrioritye() {
 		Resistration resistration = new Resistration();
 		int prioritye = resistration.standardInputPrioritye();
 		return prioritye;
 	}
-	//優先度変更の最終確認
+	//優先度変更の最終確認----------------------------------------------------------------------------------
 	public boolean checkEditPrioritye(int prioritye) {
 		boolean judge = false;
 		System.out.println("優先度：" + prioritye);
@@ -88,7 +88,7 @@ public class Edit {
 		}
 		return judge;
 	}
-	//優先度の変更
+	//優先度の変更--------------------------------------------------------------------------------------
 	public void editPrioritye(TodoFolder todoFolder, int todoNum, int prioritye) {
 //		int ListNum = todoNum - 1;
 		for(int i = 0; i < todoFolder.getTodos().size(); i ++) {

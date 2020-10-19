@@ -7,7 +7,7 @@ import java.util.Date;
 import java.util.Scanner;
 
 public class CommonLogic {
-	//Todo選択メソッド
+	//Todo選択メソッド------------------------------------------------------------------------------
 	public static int choiceTodo(TodoFolder todoFolder, String command) {
 		Display display = new Display();
 		int todoNum = 0;//return
@@ -35,7 +35,7 @@ public class CommonLogic {
 		System.out.println("上記Todoを" + command + "します");
 		return todoNum;
 	}
-	//コマンド選択メソッド
+	//コマンド選択メソッド--------------------------------------------------------------------------------------
 	public static int choiceCommandPattern(int navPattern, String navString) {
 		int choiceNum = 0;//return用
 		System.out.println( "コマンドを数字で選びなさい");
@@ -59,14 +59,14 @@ public class CommonLogic {
 		}
 		return choiceNum;
 	}
-	//Date型からString変換
+	//Date型からString変換-------------------------------------------------------------------------------
 	public static String conversionDateToString(Date date) {
 		String dateFormat = "";
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy年MM月dd日 HH時mm分");
 		dateFormat = sdf.format(date);
 		return dateFormat;
 	}
-	//優先度順に並び替え
+	//優先度順に並び替え----------------------------------------------------------------------------------
 	public static void sortPrioritye(TodoFolder todoFolder, boolean judge) {
 		ArrayList<Todo> todoList = todoFolder.getTodos();
 		Collections.sort(todoList, new Comparator_PriorityeTodo()); //優先度昇順
@@ -74,7 +74,7 @@ public class CommonLogic {
 			Collections.reverse(todoList);// 降順
 		}
 	}
-	//期限順に並べかえ
+	//期限順に並べかえ---------------------------------------------------------------------------------------
 	public static void sortLimit(TodoFolder todoFolder, boolean judge) {
 		ArrayList<Todo> todoList = todoFolder.getTodos();
 		Collections.sort(todoList, new Comparator_LimitTodo());//期限昇順
@@ -82,7 +82,7 @@ public class CommonLogic {
 			Collections.reverse(todoList);// 降順
 		}
 	}
-	//登録順に並び替え
+	//登録順に並び替え---------------------------------------------------------------------------------------s
 	public static void sortResistration(TodoFolder todoFolder, boolean judge) {
 		ArrayList<Todo> todoList = todoFolder.getTodos();
 		Collections.sort(todoList, new Comparator_ResistrationTodo());//登録昇順

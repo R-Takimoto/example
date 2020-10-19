@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class Display {
-	//表示方法確認処理
+	//表示方法確認処理---------------------------------------------------------------------------------
 	public void confirmSort(TodoFolder todoFolder) {
 		String navString = "1:登録順 2:期限順 3:優先度順";
 		int navPattern = 3;
@@ -33,7 +33,7 @@ public class Display {
 			CommonLogic.sortPrioritye(todoFolder, judge);//優先度順に並べかえ
 		}
 	}
-	//Todo一覧表示メソッド
+	//Todo一覧表示メソッド------------------------------------------------------------------------------
 	public void displayTodos(TodoFolder todoFolder) {
 		ArrayList<Todo> todoList = todoFolder.getTodos();
 		for(int i = 0; i < todoList.size(); i ++) {
@@ -41,7 +41,7 @@ public class Display {
 			displayTodo(todo);
 		}
 	}
-	//Todo表示メソッド
+	//Todo表示メソッド-----------------------------------------------------------------------------------
 	public void displayTodo(Todo todo) {
 //		CommonLogic cl = new CommonLogic();
 		Date resistrationDate = todo.getResistrationDate();

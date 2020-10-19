@@ -3,7 +3,7 @@ package model;
 import java.util.ArrayList;
 
 public class Delete {
-	//削除するTodoの確認
+	//削除するTodoの確認--------------------------------------------------------------------------------------------
 	public boolean confirmTodo(TodoFolder todofolder, int todoNo) {
 		boolean judgeDeleteTodo = false;
 		System.out.println("よろしいですか？");
@@ -23,7 +23,7 @@ public class Delete {
 
 	}
 
-	//Todo削除処理
+	//Todo削除処理------------------------------------------------------------------------------------
 	public void deleteTodo(TodoFolder todoFolder, int todoNum) {
 //		int ListNum = todoNum -1;
 		for(int i = 0; i < todoFolder.getTodos().size(); i ++) {
@@ -33,7 +33,7 @@ public class Delete {
 			}
 		}
 	}
-	//TodoNo.の振り直し処理
+	//TodoNo.の振り直し処理--------------------------------------------------------------------------
 	public void redoFolderNum(TodoFolder todoFolder) {
 		CommonLogic.sortResistration(todoFolder, true);//登録昇順
 		ArrayList<Todo> todos = todoFolder.getTodos();
