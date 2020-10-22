@@ -28,10 +28,6 @@ public class Nav {
 		return name;
 	}
 
-//	public void setName(String name) {
-//		this.name = name;
-//	}
-
 	public TodoFolder getMyFolder() {
 		return myFolder;
 	}
@@ -47,7 +43,7 @@ public class Nav {
 		while(true) {
 
 			//フォルダ確認
-			checkFolder_firstNav();//Todoが0なら実行
+			checkFolderNav();//Todoが0なら実行
 
 			//Todoが1件以上の処理
 			String navString = "1:登録 2:表示 3:編集 4:削除 5:終了";
@@ -70,7 +66,6 @@ public class Nav {
 				break;
 			case 5:
 				Persistence.saveFolder(myFolder);
-//				myFolder.saveFolder(myFolder);
 				System.out.println(this.name + "： Bye");
 				System.exit(0);// 終了
 			default:
@@ -81,10 +76,10 @@ public class Nav {
 	}
 
 	//Todo確認-----------------------------------------------------------
-	private void checkFolder_firstNav() {
+	private void checkFolderNav() {
 		if(myFolder.getTodos().size() == 0) {
 			while(true) {
-				System.out.println(this.name + "：抱えてるタスクが無いわ。");
+				System.out.println(this.name + "：抱えてるタスクが登録されて無いわ。");
 				//コマンド選択処理
 				String navString = "1:登録 2:終了";
 				int navPattern = 2;
@@ -101,6 +96,7 @@ public class Nav {
 					}
 				}else if(choiceNum == 2) {
 					System.out.println(this.name + "： Bye");
+					Persistence.saveFolder(myFolder);
 					System.exit(0);// 終了
 				}else {
 					System.out.println("????");
@@ -135,7 +131,6 @@ public class Nav {
 			}else {
 				System.out.println("入力内容を破棄します。");
 			}
-//			this.myFolder.saveFolder(myFolder);
 		}
 
 	//表示----------------------------------------------------------------------

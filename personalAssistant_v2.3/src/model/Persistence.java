@@ -41,7 +41,7 @@ public class Persistence {
 				}
 
 				fw.close();
-				System.out.println("書き出し完了");
+				System.out.println("保存完了");
 			}catch(IOException ex) {
 				ex.printStackTrace();
 			}

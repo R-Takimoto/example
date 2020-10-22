@@ -197,7 +197,7 @@ public class Resistration {
 	}
 
 	//未使用関数
-	//入力内容から改行コードを除く文字数を返す処理-----------------------------------------------------------------------------
+	//入力内容から改行コードを除く文字数を返す処理-----------------------------------------------------
 	public int inputLengthToRemoveNewLine(String input) {
 		String shaveInput = input;
 		int shaveLength = shaveInput.length();//return
