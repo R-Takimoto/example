@@ -47,7 +47,6 @@ public class Display {
 		}else {
 			ArrayList<Todo> todos = todoFolder.getTodos();
 			for(int i = 0; i < todos.size(); i ++) {
-//				Todo todo = todos.get(i);
 				displayTodo(todos.get(i));
 			}
 		}
@@ -61,7 +60,7 @@ public class Display {
 
 		String no = String.valueOf(todo.getNo());
 		String header = todo.getHeader();
-		String body = todo.getBody();
+		String body = addNewLine(todo.getBody());
 		String limitDateF = CommonLogic.conversionDateToString(limitDate);
 		String resistrationDateF = CommonLogic.conversionDateToString(resistrationDate);
 		String prioritye = String.valueOf(todo.getPrioritye());
@@ -82,4 +81,62 @@ public class Display {
 		System.out.println("処理：" + finished);
 		System.out.println("-----------------------------------------------");
 		}
+
+	//文字列に改行を追加して返す----------------------------------------------------------------------------
+	public String addNewLine(String body) {
+		String line = body;//retrun
+		int bodyLength = body.length();//渡された文字列の数
+		int lineNum = 15;//改行したい文字数
+
+		String newLine = "\n";
+		StringBuilder bodyBuilder = new StringBuilder();
+		bodyBuilder.append(body);//ビルダーに内容を渡す
+
+		int rotation = 1;//whileの周回数
+		int NewLineNum = lineNum;//改行する箇所
+		int NewLineLength = 0;//追加した改行コード分、改行箇所を調整
+
+
+		while(bodyLength > NewLineNum) {
+			bodyBuilder.insert(NewLineNum, newLine);
+			line = bodyBuilder.toString();
+			rotation ++;
+			NewLineLength ++;
+			NewLineNum = lineNum * rotation + NewLineLength;//改行箇所 * 周回数 + 追加した改行コードの数
+		}
+		return line;
+	}
+
+//	//改行追加表示//やりたいことはaddNewLineと同じ
+//	public void addNewLineDisplay(String body) {
+//		int bodyLength = body.length();
+//		ArrayList<String> listBody = new ArrayList<String>();
+//
+//		String letter = "";
+//		int j = 1;
+//		for(int i = 0; i <= bodyLength; i ++) {
+//			if(i == bodyLength) {
+//				letter = body.substring(i);
+//			}else {
+//				letter = body.substring(i,  j);
+//			}
+//
+//			listBody.add(letter);
+//			j ++;
+//		}
+//
+//		String out = "";
+//		for(int i = 0; i <= listBody.size(); i ++) {
+//			if(i == listBody.size()) {
+//				out = listBody.get(i - 1);
+//			}else {
+//				out = listBody.get(i);
+//			}
+//			if(i % 15 == 0 && i != 0) {
+//				System.out.print("\n");
+//			}
+//			System.out.print(out);
+//		}
+//	}
+
 }

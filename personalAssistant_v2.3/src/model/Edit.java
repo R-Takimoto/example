@@ -24,11 +24,27 @@ public class Edit {
 	//処理状態の変更----------------------------------------------------------------------------------------
 	public void editTodoFinished(TodoFolder todoFolder, int editNum, boolean finished) {
 		int ListNum = editNum - 1;
+		Todo todo = todoFolder.getTodos().get(ListNum);
 		if(finished) {
-			todoFolder.getTodos().get(ListNum).setFinished(finished);
-			System.out.println("こんぐらちゅれーしょん！！！");
+			todo.setFinished(finished);
+			Date limit = todo.getLimit();
+			TimeLimit tl = new TimeLimit();
+			String letter = "次は目標の立て方を見直してみよう！お疲れ様です！";
+			long limit1 = 720L;
+			long limit2 = 60L;
+			long limit3 = 10L;
+			long difference = tl.timeLimit(limit);
+			if(difference >= limit1) {
+				letter = "素晴らしいの一言ですね。どんどんこなしましょう！";
+			}else if(difference < limit1 && difference >= limit2){
+				letter = "こんぐらちゅれーしょん！！！";
+			}else if(difference <= limit3 && difference > 0L){
+				letter = "ギリギリーーー！！お疲れ";
+			}
+			System.out.println(letter);
 		}else {
-			todoFolder.getTodos().get(ListNum).setFinished(finished);
+			todo.setFinished(finished);
+//			todoFolder.getTodos().get(ListNum).setFinished(finished);
 			System.out.println("一つずつこなしていこう！");
 		}
 	}

@@ -29,7 +29,9 @@ public class Resistration {
 		while(true) {
 			try{
 				System.out.println(headerMozisu + "文字以内で見出しの入力をお願い");
+				System.out.println("改行はできませんので悪しからず");
 				header = sc.nextLine();
+				header = deleteNewLine(header);//改行コードチェック：除去
 				if(header.length() == 0) {
 					System.out.println("なんか書けや");
 					continue;
@@ -56,6 +58,7 @@ public class Resistration {
 				System.out.println("内容入力");
 				System.out.println(bodyMozisu + "文字以内で");
 				body = sc.nextLine();
+				body = deleteNewLine(body);//改行コードチェック：除去
 				if(body.length() == 0) {
 					System.out.println("なんか書け");
 					continue;
@@ -91,7 +94,7 @@ public class Resistration {
 					continue;
 				}
 				std.setLenient(false); //日付の厳密チェック機能をＯＮにする。不正ならException
-				limitD = std.parse(limit); //文字列からDate型に変換
+				limitD = std.parse(limit); //文字列からDate型に変換//parseException
 				//現在時刻 < 期限 の判定処理
 				Date now = new Date();
 				if(limitD.before(now)) {
@@ -127,7 +130,7 @@ public class Resistration {
 		return prioritye;
 	}
 
-	//Todo内容確認処理---------------------------------------------------------------------------
+	//Todo最終内容確認処理---------------------------------------------------------------------------
 	public boolean confirmContentsIsDone(Todo todo) {
 		Scanner sc = new Scanner(System.in);//標準入力はcloseしなくてok??
 		boolean done;// return用
@@ -165,12 +168,55 @@ public class Resistration {
 		return done;
 	}
 
-	//Todo登録処理------------------------------------------------------------------------------
+	//Todoをフォルダに追加登録処理------------------------------------------------------------------------------
 	public void addTodo(TodoFolder todoFolder, Todo todo) {
 		int todoLength = todoFolder.getTodos().size();//現在のTodo数を確認
 		int no = todoLength + 1;//ListナンバーとTodoナンバーのズレを処理
 		todo.setNO(no);//TodoにNo.を付け加える
 		todoFolder.getTodos().add(todo);//フォルダに追加
+	}
+
+	//入力内容から改行コードを取り除く-----------------------------------------------------------------------------
+	public String deleteNewLine(String input) {
+		String shaveInput = input;
+		String newLine = "\r\n";//改行コードパターン
+		String newLine2 = "\r";//改行コードパターン
+		String newLine3 = "\n";//改行コードパターン
+
+		if(shaveInput.matches(".*\r\n.*")) {
+			shaveInput = shaveInput.replace(newLine, "");
+
+		}else if(shaveInput.matches(".*\r.*")) {
+			shaveInput = shaveInput.replace(newLine2, "");
+
+		}else if(shaveInput.matches(".*\n.*")) {
+			shaveInput = shaveInput.replace(newLine3, "");
+
+		}
+		return shaveInput;
+	}
+
+	//未使用関数
+	//入力内容から改行コードを除く文字数を返す処理-----------------------------------------------------------------------------
+	public int inputLengthToRemoveNewLine(String input) {
+		String shaveInput = input;
+		int shaveLength = shaveInput.length();//return
+		String newLine = "\r\n";//改行コードパターン
+		String newLine2 = "\r";//改行コードパターン
+		String newLine3 = "\n";//改行コードパターン
+
+		if(shaveInput.matches(".*\r\n.*")) {
+			shaveInput = shaveInput.replace(newLine, "");
+
+		}else if(shaveInput.matches(".*\r.*")) {
+			shaveInput = shaveInput.replace(newLine2, "");
+
+		}else if(shaveInput.matches(".*\n.*")) {
+			shaveInput = shaveInput.replace(newLine3, "");
+
+		}
+		shaveLength = shaveInput.length();
+		return shaveLength;
 	}
 
 }

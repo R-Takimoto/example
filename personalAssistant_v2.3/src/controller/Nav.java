@@ -1,11 +1,13 @@
 package controller;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 import model.CommonLogic;
 import model.Delete;
 import model.Display;
 import model.Edit;
+import model.Persistence;
 import model.Resistration;
 import model.Todo;
 import model.TodoFolder;
@@ -39,14 +41,15 @@ public class Nav {
 
 	//main制御ナビ ---------------------------------------------------------------------------
 	public void nav() {
-		myFolder.readFolder();//ファイル確認処理
+		Persistence.readFolder(myFolder);//ファイル確認
+//		myFolder.readFolder();//ファイル確認処理
 		System.out.println(this.name + "：Hello");
 		while(true) {
 
 			//フォルダ確認
-			checkFolder_firstNav();//フォルダ空なら実行
+			checkFolder_firstNav();//Todoが0なら実行
 
-			//タスク存在時処理
+			//Todoが1件以上の処理
 			String navString = "1:登録 2:表示 3:編集 4:削除 5:終了";
 			int navPattern = 5;
 			int choiceNum = 0;
@@ -66,7 +69,8 @@ public class Nav {
 				delete();
 				break;
 			case 5:
-				myFolder.saveFolder(myFolder);/////////////////////////////////////////////////////
+				Persistence.saveFolder(myFolder);
+//				myFolder.saveFolder(myFolder);
 				System.out.println(this.name + "： Bye");
 				System.exit(0);// 終了
 			default:
@@ -75,9 +79,9 @@ public class Nav {
 			}
 		}
 	}
-	//ファイル確認-----------------------------------------------------------
-	private void checkFolder_firstNav() {
 
+	//Todo確認-----------------------------------------------------------
+	private void checkFolder_firstNav() {
 		if(myFolder.getTodos().size() == 0) {
 			while(true) {
 				System.out.println(this.name + "：抱えてるタスクが無いわ。");
@@ -104,17 +108,17 @@ public class Nav {
 				}
 			}
 		}else {
-			int todos = 0;
-			int[] finishedTodoNum = CommonLogic.finishedTodoNum(myFolder.getTodos());
-			for(int i = 0; i < myFolder.getTodos().size(); i ++) {
-				for(int j = 0; j < finishedTodoNum.length; j ++) {
-					if(myFolder.getTodos().get(i).getNo() != finishedTodoNum[j]) {
-						todos ++;
-					}
-				}
+			ArrayList<Todo> todos = myFolder.getTodos();
+			int[] finishedTodoNum = CommonLogic.finishedTodoNum(myFolder.getTodos());//処理済TodoNo.の取得
+
+			int noFinishedTodoLength = todos.size() - finishedTodoNum.length;//未処理Todoの数
+
+			if(noFinishedTodoLength > 0) {
+				System.out.println(this.name + "：現在" + noFinishedTodoLength + "件の未処理タスクが残っているわ");
+				System.out.println(this.name + "：早く片付けてくれる？");
+			}else {
+				System.out.println("現在未処理のタスクは残ってないわね");
 			}
-			System.out.println(this.name + "：現在" + todos + "件の未処理タスクが残っているわ");
-			System.out.println(this.name + "：早く片付けてくれる？");
 		}
 	}
 
