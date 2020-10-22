@@ -60,7 +60,8 @@ public class Display {
 
 		String no = String.valueOf(todo.getNo());
 		String header = todo.getHeader();
-		String body = addNewLine(todo.getBody());
+//		String body = addNewLine(todo.getBody());//改行追加
+		String body = todo.getBody();
 		String limitDateF = CommonLogic.conversionDateToString(limitDate);
 		String resistrationDateF = CommonLogic.conversionDateToString(resistrationDate);
 		String prioritye = String.valueOf(todo.getPrioritye());

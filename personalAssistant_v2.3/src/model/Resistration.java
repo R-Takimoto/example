@@ -26,11 +26,17 @@ public class Resistration {
 		Scanner sc = new Scanner(System.in);//標準入力はcloseしなくてok??
 		String header = "";//見出し格納用
 		int headerMozisu = 30;//見出し文字数の上限
+		boolean spaceCheck = true;
 		while(true) {
 			try{
 				System.out.println(headerMozisu + "文字以内で見出しの入力をお願い");
 				System.out.println("改行はできませんので悪しからず");
 				header = sc.nextLine();
+				spaceCheck = spaceCheck(header);
+				if(spaceCheck) {
+					System.out.println("しょっぱなスペースは無しで");
+					continue;
+				}
 				header = deleteNewLine(header);//改行コードチェック：除去
 				if(header.length() == 0) {
 					System.out.println("なんか書けや");
@@ -53,11 +59,17 @@ public class Resistration {
 		Scanner sc = new Scanner(System.in);//標準入力はcloseしなくてok??
 		String body = "";//内容格納用
 		int bodyMozisu = 150;
+		boolean spaceCheck = true;
 		while(true) {
 			try {
 				System.out.println("内容入力");
 				System.out.println(bodyMozisu + "文字以内で");
 				body = sc.nextLine();
+				spaceCheck = spaceCheck(body);
+				if(spaceCheck) {
+					System.out.println("しょっぱなスペースは無しで");
+					continue;
+				}
 				body = deleteNewLine(body);//改行コードチェック：除去
 				if(body.length() == 0) {
 					System.out.println("なんか書け");
@@ -176,6 +188,12 @@ public class Resistration {
 		todoFolder.getTodos().add(todo);//フォルダに追加
 	}
 
+	//header, bodyの入力時check---------------------------------------------------------------------------------
+	public boolean spaceCheck(String input) {
+		boolean judge = true;
+		judge = input.matches(" .*");
+		return judge;
+	}
 	//入力内容から改行コードを取り除く-----------------------------------------------------------------------------
 	public String deleteNewLine(String input) {
 		String shaveInput = input;
